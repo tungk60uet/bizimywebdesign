@@ -5,7 +5,56 @@ body {
   font-size: .875rem;
 }
 .main-content{
-  height: calc(100vh - 54.4px);
+  height: calc(100vh - 56px);
+}
+.vertical-divider {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: 50%;
+  line-height: 0;
+  text-align:center;
+  text-transform: uppercase;
+  transform: translateX(-50%);
+}
+
+.vertical-divider:before, 
+.vertical-divider:after {
+  position: absolute;
+  left: 50%;
+  content: '';
+  z-index: 9;
+  border-left: 1px solid rgba(34,36,38,.15);
+  border-right: 1px solid rgba(255,255,255,.1);
+  width: 0;
+  height: calc(100%);
+}
+
+.row-divided > .vertical-divider {
+  height: calc(50%);    
+}
+
+.vertical-divider:before {
+  top: -100%;
+}
+
+.vertical-divider:after {
+  top: auto;
+  bottom: 0;
+}
+
+.row-divided {
+  position:relative;
+}
+
+.row-divided > [class^="col-"],
+.row-divided > [class*=" col-"] {
+  padding-left: 30px;  /* gutter width (give a little extra room) 2x default */
+  padding-right: 30px; /* gutter width (give a little extra room) 2x default */
 }
 .data-detail .card {
   font-weight: 500;
@@ -44,7 +93,7 @@ body {
   margin-right: 1em;
 }
 
-.sidebar .nav-link.active,
+.sidebar .nav-item.active .nav-link,
 .sidebar .nav-link:hover {
   color: #007bff;
   fill: #007bff;
@@ -53,8 +102,16 @@ body {
 border-radius: 0;
 width: max-content;
 padding: 0;
-margin-left: 15px;
-margin-top: -32px;
+margin-left: 16px;
+margin-top: -30px;
+box-shadow: 5px 5px 10px #00000047;
+}
+.my-button{
+    font-size: 23px;
+  color: #2577b2
+}
+.my-button:hover{
+   color: #154364
 }
 /*
  * Navbar
@@ -73,6 +130,29 @@ margin-top: -32px;
   border-width: 0;
   border-radius: 0;
   z-index: 1000;
+}
+.navbar .nav-link svg {
+  width:30px;
+  
+}
+.navbar .nav-link * {
+  vertical-align: middle;
+}
+.navbar .nav-link {
+  font-weight: 500;
+  color: #ffffff80;
+  fill: #ffffff80;
+  font-size: 16px;
+  margin-top: 5px;
+}
+.navbar .active {
+  background-color: #00000030;
+  border-bottom: 5px solid #00000070;
+}
+.navbar .nav-item.active .nav-link,
+.navbar .nav-link:hover {
+  color: #ffffffff!important;
+  fill: #ffffffff;
 }
 .dropdown button {
   background-color: transparent;
