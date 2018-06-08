@@ -154,11 +154,13 @@ box-shadow: 5px 5px 10px #00000047;
   color: #ffffffff!important;
   fill: #ffffffff;
 }
-.dropdown button {
+.navbar .dropdown button,
+.sidebar .dropdown button {
   background-color: transparent;
   border: 0;
 }
-.dropdown button:focus{
+.navbar .dropdown button,
+.sidebar .dropdown button button:focus{
   outline: 0;
 }
 .rounded-circle{
