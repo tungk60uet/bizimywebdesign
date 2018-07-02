@@ -1,1 +1,44 @@
-/* your styles go here */
+nav.navbar a{
+	font-size: 1rem;
+	font-weight: 500;
+}
+nav.navbar .list-function .active{
+	background-color: #00000029;
+	/*border-bottom: 5px solid #00000029;*/
+}
+.side-navbar {
+	background-color: #dcdcdc;
+
+}
+.side-navbar li a{
+	color: #3e3e3e;
+	
+}
+.side-navbar .sidenav-heading{
+	color: #787878;
+}
+
+.side-navbar li ul {
+	background-color: #d0d0d0;
+}
+.side-navbar li ul.collapse a:hover{
+	background-color: #a5a5a5;
+}
+.side-navbar .shop-name .cur-shop {
+	font-size: 1rem;
+	font-weight: 500;
+}
+.account{
+	padding: 5px;
+}
+@media (max-width: 1199px) {
+	.side-navbar .shop-name .cur-shop {
+		font-size: .7rem;
+		font-weight: 300;
+	}
+
+	.side-navbar .sidenav-header img {
+		width: 41px;
+		padding: 5px;
+	}
+}
